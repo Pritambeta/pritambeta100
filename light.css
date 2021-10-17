@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    width: 100%;
+    transform: rotate(-35deg);
+}
+.container .box {
+    position: relative;
+    left: -220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% + 400px);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    animation: animateSurface 1.5s ease-in-out infinite;
+}
+@keyframes animateSurface {
+ 0% {
+     transform: translateX(0px);
+ }
+ 100% {
+     transform: translateX(-200px);
+ }
+
+}
+.container .box .cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: rgb(126, 126, 126);
+    box-shadow: 0px 0px 5px rgb(126, 126, 126),
+    0px 0px 25px rgb(126, 126, 126),
+    0px 0px 50px rgb(126, 126, 126),
+    0px 0px 100px rgb(126, 126, 126),
+    0px 0px 200px rgba(126, 126, 126, 0.5),
+    0px 0px 300px rgba(126, 126, 126, 0.5);
+    animation: animate 1.5s ease-in-out infinite;
+    transform-origin: bottom right;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(90deg);
+    }
+    65% {
+        transform: rotate(85deg);
+    }
+    70% {
+        transform: rotate(90deg);
+    }
+    75% {
+        transform: rotate(87.5deg);
+    }
+    80%, 100% {
+        transform: rotate(90deg);
+    }
+}
